@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: url("http://www.jakpost.travel/imgfiles/full/21/211003/log-wallpaper.jpg");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    opacity: 0.9;
+    
+    }
