@@ -1,17 +1,3 @@
-<script>
-    var i = 0;
-    var txt = 'Easy access to movies and meta information about them!';
-    var speed = 50;
-    
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("typewriter").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    </script>
-
 
 <div class="row bn mt-5">
     <div class="col-sm-6">
@@ -21,37 +7,39 @@
                     <h4>Signup Form</h4>
                 </div>
                 <div class="card-text">
-                    <form>
+                    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
                         <div class="form-row">
                             <div class="form-group col-sm-6">
-                              <input type="text" class="form-control" placeholder="First Name">
+                              <input type="text" class="form-control" placeholder="First Name" [formControl]="myForm.controls['firstName']">
                             </div>
                             <div class="form-group col-sm-6">
-                              <input type="text" class="form-control" placeholder="Last Name">
+                              <input type="text" class="form-control" placeholder="Last Name" [formControl]="myForm.controls['lastName']">
                             </div>
                           </div>
+                          <div class="alert alert-danger" *ngIf="(!myForm.controls['firstName'].valid && myForm.controls['firstName'].touched) || (!myForm.controls['lastName'].valid && myForm.controls['lastName'].touched)  ">
+                              First and last name required!
+                          </div>
                           <div class="form-group">
-                              <input type="email" class="form-control" placeholder="Enter your email">
+                              <input type="email" class="form-control" placeholder="Enter your email" [formControl]="myForm.controls['email']">
                                 <small>We will never share your email with anyone!</small>
                             </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Enter password">
+                            <div class="alert alert-danger" *ngIf="(!myForm.controls['email'].valid && myForm.controls['email'].touched)">
+                                A valid email is required!
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Confirm password">
+                                <input type="password" class="form-control" placeholder="Enter password" [formControl]="myForm.controls['password']">
                             </div>
-                            <button type="button" class="btn btn-info btn-block">Submit</button>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Confirm password" [formControl]="myForm.controls['confirmPassword']">
+                            </div>
+                            <div class="alert alert-danger" *ngIf="(!myForm.controls['password'].valid && myForm.controls['password'].touched) && (!myForm.controls['confirmPassword'].valid && myForm.controls['confirmPassword'].touched)">
+                                Valid password is required!
+                            </div>
+                            <button type="submit" class="btn btn-info btn-block">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-6">
-        <div class="container jk" style="color: white">
-            <div>
-                <p class="display-5" id="typewriter"></p>
-              </div>
-        </div>
-        <!-- <button type="button" class="btn btn-primary" onclick="typeWriter()">click me</button> -->
-    </div>
+    
 </div>
