@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="row bn mt-5">
+    <div class="offset-sm-4 col-sm-4">
+        <div class="card text-blank border-0 cardstyle">
+            <div class="card-title text-center">
+                <h3>Login Form</h3>
+            </div>
+            <div class="card-text">
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+                    <div class="form-group">
+                        <input class="form-control" type="email" placeholder="Email" [formControl]="myForm.controls['email']">
+                    </div>
+                    <div class="alert alert-danger" *ngIf="(!myForm.controls['email'].valid && myForm.controls['email'].touched)"> 
+                        A valid email is required!
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" placeholder="Password" [formControl]="myForm.controls['password']">
+                    </div>
+                    <div class="alert alert-danger" *ngIf="(!myForm.controls['password'].valid && myForm.controls['password'].touched)">
+                        Valid password is required!
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
