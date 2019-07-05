@@ -5,8 +5,8 @@ html, body{
 }
 body{
     background: url("http://www.jakpost.travel/imgfiles/full/21/211003/log-wallpaper.jpg");
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    opacity: 0.9;
+    background-size:    cover;                      
+    background-repeat:   repeat-y;
+    opacity: 0.9;   
     
     }
