@@ -13,10 +13,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  url:any;
+
   searchMovie(query){
-    // url="http://omdbapi.com/?s=" + query + "&apikey=thewdb"
-    this.http.get("http://omdbapi.com/?s=avengers&apikey=thewdb").subscribe((data)=>{
+    this.url="http://omdbapi.com/?s=" + query + "&apikey=thewdb"
+    
+    this.http.get(this.url).subscribe((data)=>{
       console.log(data);
     })
 
