@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-display-movies',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayMoviesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
 
+  url:any;
+  movies: any;
+  searchMovie(query){
+    this.url="http://omdbapi.com/?s=" + query + "&apikey=thewdb"
+    
+    this.http.get(this.url).subscribe((data)=>{
+      
+      this.movies=data;
+      console.log(this.movies['Search']);
+    })
+
+  }
 }
