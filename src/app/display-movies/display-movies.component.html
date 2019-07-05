@@ -1,23 +1,35 @@
+<div class="jk">
+
+
 <div class="row mt-5">
         <div class="col-sm-8 offset-sm-2">
 
             <div class="card text-blank border-0 bg-yv">
+                
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search Movies" [(ngModel)]="query" name="query">
                 </div>
                 <button class="btn btn-md btn-info" type="button" (click)="searchMovie(query)">Search</button>
+                
                 <div class="card-body" *ngIf="movies">
                     <div class="card-title">
                         <h2>List Of Movies</h2>
                     </div>
                     <div class="card-text">
-                        <ul class="list-group" *ngFor="let movie of movies['Search']">
-                            <li class="list-item">
-                                {{movie["Title"]}} - {{movie["Year"]}}
-                            </li>
-                        </ul>
+                        <div class="row" *ngFor="let m of movies['Search']">
+                            <div class="col-sm-4">
+                                <img [src]="m['Poster']" alt="avatar" width="256" height="256">
+                            </div>
+                            <div class="col-sm-8">
+                                <h5>{{m["Title"]}} - {{m["Year"]}}</h5>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
+
+</div>
