@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
@@ -6,6 +8,8 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+
+
 
 export class SignupComponent implements OnInit {
   myForm: FormGroup;

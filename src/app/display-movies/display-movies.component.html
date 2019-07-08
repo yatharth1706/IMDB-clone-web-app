@@ -16,12 +16,13 @@
                         <h2>List Of Movies</h2>
                     </div>
                     <div class="card-text">
-                        <div class="row" *ngFor="let m of movies['Search']">
-                            <div class="col-sm-4">
-                                <img [src]="m['Poster']" alt="avatar" width="256" height="256">
+                        <div class="row" *ngFor="let m of movies['results']">
+                            <div class="col-sm-4" *ngIf="m['poster_path']">
+                                <img [src]="'http://image.tmdb.org/t/p/w185//' + m['poster_path']" alt="avatar" width="256" height="256">
                             </div>
-                            <div class="col-sm-8">
-                                <h5>{{m["Title"]}} - {{m["Year"]}}</h5>
+                            <div class="col-sm-8" *ngIf="m['poster_path']">
+                                <h4>{{m["title"]}} - {{m["release_date"]}}</h4>
+                                <p>{{m["overview"]}}</p>
                             </div>
                         </div>
                         

@@ -1,0 +1,20 @@
+<button class="btn btn-primary" type="button" (click)="searchTV()">TV Shows</button>
+
+<div class="row kl">
+    <div class="col-sm-6"  *ngFor="let m of results">
+        <div class="card text-blank border-0">
+            <div class="card-body jk">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img [src]="'http://image.tmdb.org/t/p/w185//' + m['poster_path']" alt="avatar">
+                    </div>
+                    <div class="col-sm-8 bn">
+                        <h4>{{m['name']}} {{m['title']}}</h4>
+                        <p>{{ m['overview'].substring(0,200) }}...</p>  
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bn jk">View More..</div> 
+        </div>
+    </div>
+</div>
