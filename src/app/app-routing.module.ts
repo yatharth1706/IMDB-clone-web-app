@@ -4,12 +4,14 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { DisplayMoviesComponent } from './display-movies/display-movies.component';
 import { TvShowComponent } from './tv-show/tv-show.component';
+import { DiscoverComponent } from './discover/discover.component';
 
 const routes: Routes = [
   {path: 'login' ,component: LoginComponent},
   {path: 'signup' , component: SignupComponent},
   {path: 'movies', component: DisplayMoviesComponent},
   {path: 'tvshows' ,component: TvShowComponent},
+  {path: 'discover', component: DiscoverComponent},
   {path: '**', redirectTo: 'login'}
 ];
 

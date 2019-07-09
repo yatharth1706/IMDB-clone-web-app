@@ -13,25 +13,15 @@ export class DisplayMoviesComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  url:any;
-  movies: any;
-  posters: any[]=[];
   
+  movies: any;
+  results: any[]=[];
+
   searchMovie(query){
-    this.url="https://api.themoviedb.org/3/search/movie?query=" + query +"&api_key=" + this.auth.apikey + "&language=en-US&external_source=imdb_id";
-    // this.url="http://omdbapi.com/?s=" + query + "&apikey=thewdb"
     
-    this.http.get(this.url).subscribe((data)=>{
-      this.posters=[];
+    this.auth.searchMovie(query).subscribe((data)=>{
       this.movies=data;
-      console.log(this.movies);
-      // console.log(this.movies['results'][0]['poster_path']);
-      for(let source in this.movies['results']){
-        this.posters.push(this.movies['results'][source]['poster_path']);
-      }
-      
-      // console.log(this.posters);
+      this.results=this.movies['results'];
     })
 
   }

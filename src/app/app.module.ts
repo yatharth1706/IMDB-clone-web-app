@@ -14,6 +14,7 @@ import { TopratedComponent } from './toprated/toprated.component';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import { TvShowComponent } from './tv-show/tv-show.component';
+import { DiscoverComponent } from './discover/discover.component';
 var firebaseConfig = {
   apiKey: "AIzaSyCduDm-zjIjfs45uaHovcuAUL2AgrcNWKE",
   authDomain: "movie-a8e04.firebaseapp.com",
@@ -34,7 +35,8 @@ firebase.initializeApp(firebaseConfig);
     SignupComponent,
     DisplayMoviesComponent,
     TopratedComponent,
-    TvShowComponent
+    TvShowComponent,
+    DiscoverComponent
   ],
   imports: [
     BrowserModule,
