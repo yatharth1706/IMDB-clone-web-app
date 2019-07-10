@@ -22,6 +22,7 @@ export class TvShowComponent implements OnInit {
     this.auth.search(query).subscribe((data)=>{
       this.movies=data;
       this.results=this.movies['results'];
+      console.log(data);
     })
   }
 }
