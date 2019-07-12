@@ -1,0 +1,44 @@
+<!-- [ngStyle]="{ 'background-image': 'url(' + image + ')'}" -->
+<!-- <img [src]="'http://image.tmdb.org/t/p/w185//' + results['poster_path']" alt="avatar"> -->
+<section class="backdiv">
+    <div class="backContent" [ngStyle]="{ 'background-image': 'url(' + image + ')'}">
+        <div class="card text-blank border-0 mt-5" style="background: transparent;">
+            <div class="card-body" style="color: white">
+                <div class="row">
+                    <div class="col-sm-4 imageContent">
+                            <img [src]="'http://image.tmdb.org/t/p/w342//' + results['poster_path']" alt="avatar">
+                    </div>
+                    <div class="col-sm-8">
+                        <strong><h2>{{results['title']}}</h2></strong>
+                        <p>{{results['overview']}}</p>
+                        <span><h4>Released on: {{results['release_date']}}</h4></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<div class="cast">
+    <h2>Cast Members</h2>
+    <div class="castContent row">
+            
+        <div class="col-sm-2" *ngFor="let m of profile">
+            <div class="card text-blank border-1">
+                <img src="https://image.tmdb.org/t/p/w185/{{m['profile_path']}}" alt="avatar">
+            
+                <div class="card-body">
+                    <div class="card-text">
+                        {{m['name']}} <br>
+                        {{m['character']}}
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<div class="castrow">
+        <a href="" style="font-size: 20px">View Full Cast and Crew</a>
+</div>
