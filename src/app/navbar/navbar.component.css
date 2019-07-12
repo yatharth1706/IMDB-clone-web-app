@@ -1,9 +1,7 @@
-.opac{
-    background-color: transparent;
-}
+
 
 .navcolor{
-    background-color: #4d455f;
+    background-color: #15141d;
     color: white;
 }
 
@@ -12,13 +10,20 @@
 }
 
 .dropdown-menu{
-    background-color: #4d455f;
+    background-color: #15141d;
 }
 
 .dropdown-item:hover{
-    background-color: #6f5e96 !important;
+    background-color: #15141d !important;
 }
 
 .nav-link:hover{
-    background-color: #6f5e96 !important;
+    background-color: #15141d !important;
+}
+
+.navbar-toggler-icon{
+    color: white;
+}
+.navbar-toggler{
+    color: white;
 }
