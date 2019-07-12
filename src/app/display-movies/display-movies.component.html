@@ -21,7 +21,7 @@
                                 <img [src]="'http://image.tmdb.org/t/p/w185//' + m['poster_path']" alt="avatar" width="256" height="256">
                             </div>
                             <div class="col-sm-8" *ngIf="m['poster_path']">
-                                <h4>{{m["title"]}} - {{m["release_date"]}}</h4>
+                                    <a routerLink="view/{{m['id']}}" style="color: white"><h4>{{m["title"]}} - {{m["release_date"]}}</h4></a>
                                 <p>{{m["overview"]}}</p>
                             </div>
                         </div>
