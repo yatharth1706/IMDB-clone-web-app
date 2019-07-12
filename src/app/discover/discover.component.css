@@ -22,32 +22,33 @@ label{
 .box select {
     
     margin-top: 5px;
-    background-color: #3e2e63;
+    background-color: #15141d;
     color: #fff;
     border: none;
     padding: 10px;
     /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
     /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #3e2e63;*/
-    -webkit-appearance: button; 
+    /* -webkit-appearance: button;  */
     background-position-x: 80px;
-}
+} 
+
 
 .box select:hover{
     cursor: pointer;
 }
 
 .nm input{
-    background-color: #3e2e63;
+    background-color: #15141d;
     border:none;
     margin-top: 13px;
     width: 250px;
     height: 44px;
-    box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
     color: white; 
 }
 
 .jk{
-    background-color: #2a284e;
+    background-color: #15141d;
 }
 
 .jk .card-body{

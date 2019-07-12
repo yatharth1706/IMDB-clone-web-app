@@ -2,7 +2,7 @@
 <span class="search_element full">
   <label for="primary_release_year">Year</label>
   
-  <select id="year" class="caret" name="year" style="width: 100px;" [(ngModel)]="year" (change)="fn()">
+  <select id="year" name="year" [(ngModel)]="year" (change)="fn()">
     <option value="0">None</option>
     
     <option value="2019" selected>2019</option>
@@ -332,7 +332,7 @@
                         <img [src]="'http://image.tmdb.org/t/p/w185//' + m['poster_path']" alt="avatar">
                     </div>
                     <div class="col-sm-8 bn">
-                        <h4>{{m['name']}} {{m['title']}}</h4>
+                        <a routerLink="view/{{m['id']}}" style="color: white"><h4>{{m['name']}} {{m['title']}}</h4></a>
                         <p>{{ m['overview'].substring(0,200) }}...</p>  
                     </div>
                 </div>
