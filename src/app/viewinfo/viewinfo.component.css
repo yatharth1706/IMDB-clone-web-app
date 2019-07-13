@@ -4,6 +4,7 @@
     height: 700px;
     box-sizing: border-box;
     display: inline-block;
+    background: linear-gradient(rgba(0,0,0,0.7));
 }
 
 
@@ -18,4 +19,12 @@
 .card {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     border: 1px solid #e3e3e3;
+}
+
+.videobackground{
+    border-color: rgba(33,37,41,0.125);
+}
+
+.title{
+    font-size: 20px;
 }

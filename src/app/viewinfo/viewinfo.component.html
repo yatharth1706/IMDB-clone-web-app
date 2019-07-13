@@ -1,17 +1,28 @@
 <!-- [ngStyle]="{ 'background-image': 'url(' + image + ')'}" -->
+<!-- [ngStyle]="{ 'background-image': 'url(' + image + ')'}" -->
 <!-- <img [src]="'http://image.tmdb.org/t/p/w185//' + results['poster_path']" alt="avatar"> -->
 <section class="backdiv">
-    <div class="backContent" [ngStyle]="{ 'background-image': 'url(' + image + ')'}">
+    <div class="backContent"  [ngStyle]="{background: 'linear-gradient(-225deg, rgba(0,0,0,0.6) 50%, rgba(0,36,61,0.6) 80%), url(' + image  +')'}">
+        
         <div class="card text-blank border-0 mt-5" style="background: transparent;">
             <div class="card-body" style="color: white">
                 <div class="row">
                     <div class="col-sm-4 imageContent">
                             <img [src]="'http://image.tmdb.org/t/p/w342//' + results['poster_path']" alt="avatar">
                     </div>
+                    <div *ngIf="vid" class="videobackground" style="width: 779px;height:450px;padding-top:-20px;padding-down:40px;background-color: rgb(0, 0, 0);border-bottom-color: rgb(0, 0, 0);color: rgb(255, 255, 255);">
+                            <span class="title">Trailer</span>
+                            <div class="k-window-actions">
+                                <a style="cursor:pointer;" class="k-button k-bare k-button-icon k-window-action" aria-label="Close" (click)="changeVid()"><span class="k-icon k-i-close" style="color:white; float:right;margin-top:-30px;font-size:20px;line-height: 40px;"><i class="fa fa-times" aria-hidden="true"></i></span></a>
+                            </div>
+                        
+                        <iframe width="100%" height="100%" [src]='sanitizer.bypassSecurityTrustResourceUrl(myurl)' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     <div class="col-sm-8">
                         <strong><h2>{{results['title']}}</h2></strong>
                         <p>{{results['overview']}}</p>
                         <span><h4>Released on: {{results['release_date']}}</h4></span>
+                        <button type="button" class="btn btn-primary" (click)="trailer()"><i class="fa fa-play" aria-hidden="true"></i>Play Trailer</button>
                     </div>
                 </div>
             </div>
@@ -23,9 +34,9 @@
 <div class="cast">
     <h2>Cast Members</h2>
     <div class="castContent row">
-            
+        
         <div class="col-sm-2" *ngFor="let m of profile">
-            <div class="card text-blank border-1">
+            <div class="card text-blank border-1" style="width: 100%; height: 100%">
                 <img src="https://image.tmdb.org/t/p/w185/{{m['profile_path']}}" alt="avatar">
             
                 <div class="card-body">
@@ -42,3 +53,4 @@
 <div class="castrow">
         <a href="" style="font-size: 20px">View Full Cast and Crew</a>
 </div>
+

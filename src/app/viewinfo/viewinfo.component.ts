@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService } from '../auth.service';
 import { ActivatedRoute } from '@angular/router';
+
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-viewinfo',
   templateUrl: './viewinfo.component.html',
@@ -10,10 +12,9 @@ export class ViewinfoComponent implements OnInit {
   id:string;
   results: any;
   image: string;
-  constructor(private auth:AuthService,public activatedRoute: ActivatedRoute) {
+  constructor(private auth:AuthService,public activatedRoute: ActivatedRoute ,public sanitizer: DomSanitizer) {
     let Id=this.activatedRoute.snapshot.paramMap.get("id");
-    this.id=Id;
-    
+    this.id=Id;    
    }
    cast:any[]=[];
    profile: any[]=[];
@@ -31,9 +32,21 @@ export class ViewinfoComponent implements OnInit {
     })
     
   }
-
-  showInfo(){
-
-    
+  mov: any;
+  key: string;
+  vid:boolean=false;
+  myurl:string;
+  trailer(){
+    this.auth.trailer(this.id).subscribe((data)=>{
+      console.log(data);
+      this.mov=data;
+      this.key=this.mov.results[0].key;
+      this.myurl="https://www.youtube.com/embed/" + this.key;
+    })
+    this.vid=true;
+  }
+  
+  changeVid(){
+    this.vid=false;
   }
 }
