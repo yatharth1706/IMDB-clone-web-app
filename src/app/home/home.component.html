@@ -1,0 +1,11 @@
+<!-- <img src="'http://image.tmdb.org/t/p/w300/' + m['poster_path']" alt="Los Angeles"> -->
+
+
+<slideshow [height]="'300px'"
+           [minHeight]="'525px'"
+           [autoPlay]="true"
+           [showArrows]="false"
+           [imageUrls]="imagesArray"
+           [lazyLoad]="imagesArray?.length > 1"
+           [autoPlayWaitForLazyLoad]="true">
+</slideshow>
