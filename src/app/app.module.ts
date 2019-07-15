@@ -16,6 +16,8 @@ import 'firebase/auth';
 import { TvShowComponent } from './tv-show/tv-show.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { ViewinfoComponent } from './viewinfo/viewinfo.component';
+import { HomeComponent } from './home/home.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
 var firebaseConfig = {
   apiKey: "AIzaSyCduDm-zjIjfs45uaHovcuAUL2AgrcNWKE",
   authDomain: "movie-a8e04.firebaseapp.com",
@@ -38,14 +40,16 @@ firebase.initializeApp(firebaseConfig);
     TopratedComponent,
     TvShowComponent,
     DiscoverComponent,
-    ViewinfoComponent
+    ViewinfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

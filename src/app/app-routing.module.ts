@@ -6,8 +6,10 @@ import { DisplayMoviesComponent } from './display-movies/display-movies.componen
 import { TvShowComponent } from './tv-show/tv-show.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { ViewinfoComponent } from './viewinfo/viewinfo.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {path: "", component: HomeComponent},
   {path: 'login' ,component: LoginComponent},
   {path: 'signup' , component: SignupComponent},
   {path: 'movies', component: DisplayMoviesComponent},
