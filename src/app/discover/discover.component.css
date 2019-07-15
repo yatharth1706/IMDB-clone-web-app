@@ -18,7 +18,12 @@ label{
     display: block;
     color: white;
 }
-
+.box{
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin:0;
+}
 .box select {
     
     margin-top: 5px;
@@ -48,7 +53,7 @@ label{
 }
 
 .jk{
-    background-color: #15141d;
+    margin-top: 10px;
 }
 
 .jk .card-body{
