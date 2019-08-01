@@ -1,9 +1,28 @@
-.ss{
-    
+
+.cool{
+    animation: type 2s steps(31) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    visibility: hidden;
+    color: white;
+}
+.cool:nth-child{
+    animation-delay: 1s;
 }
 
-.slideshow-container{
-    margin-top: 100px;
-    width: 100px;
-    height: 100px;
+@keyframes type{
+    0%{
+        visibility: visible;
+        width: 0ch;
+    }
+    100%{
+        visibility: visible;
+        width: 28ch; 
+    }
+}
+.bck{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #15141d;
 }
