@@ -23,6 +23,7 @@
 
 .videobackground{
     border-color: rgba(33,37,41,0.125);
+    width: 779px;
 }
 
 .title{
@@ -30,3 +31,6 @@
 }
 
 
+.imageContent img{
+    min-height: 100px;
+}
