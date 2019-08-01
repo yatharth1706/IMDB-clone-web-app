@@ -1,8 +1,8 @@
-<div class="box">
-<span class="search_element full">
+<div class="form-row bb">
+  <div class="form-group col-sm-4">
   <label for="primary_release_year">Year</label>
   
-  <select id="year" name="year" [(ngModel)]="year" (change)="fn()">
+  <select class="form-control" id="year" name="year" [(ngModel)]="year" (change)="fn()">
     <option value="0">None</option>
     
     <option value="2019" selected>2019</option>
@@ -246,12 +246,11 @@
     <option value="1900">1900</option>
     
   </select>
+</div>
   
-</span>
-
-<span class="search_element full">
+  <div class="form-group col-sm-4">
   <label for="sort_by">Sort By</label>
-  <select id="sort_by" name="sortt" style="width: 200px;" [(ngModel)]="sortt" (change)="fn()">
+  <select id="sort_by" class="form-control" name="sortt" style="width: 100%;" [(ngModel)]="sortt" (change)="fn()">
     <option value="popularity.desc">Popularity Descending</option>
     <option value="popularity.asc">Popularity Ascending</option>
     <option value="vote_average.desc">Rating Descending</option>
@@ -261,11 +260,11 @@
     <option value="title.asc">Title (A-Z)</option>
     <option value="title.desc">Title (Z-A)</option>
   </select>
-</span>
+</div>
 
-<span class="search_element full">
+  <div class="form-group col-sm-4">
   <label for="with_genres">Genres</label>
-  <select id="with_genres" class="no_pad" style="width: 260px;" name="genres" [(ngModel)]="genres" (change)="fn()">
+  <select id="with_genres" class="form-control" style="width: 100%;" name="genres" [(ngModel)]="genres" (change)="fn()">
     
     <option value="28">Action</option>
     
@@ -306,36 +305,28 @@
     <option value="37">Western</option>
     
   </select>
-</span>
+</div>
 
 
-  
-  <span class="search_element">
-    <label for="with_keywords">Keywords</label>
-    <div class="form-group nm">
-      <input type="text" class="form-control">
-    </div>
-  </span>
+</div>
+
+<div class="row kl" style="margin-top: 10px;">
+  <div class="col-sm-6" *ngFor="let m of results;let k=index">
+      <div class="card text-blank border-0 jk" >
+          <div class="card-body">
+              <div class="row">
+                  <div class="col-md-4">
+                      <img [src]="'http://image.tmdb.org/t/p/w300' + m['poster_path']" alt="avatar" style="padding: 10px" width="100%" height="100%">
+                  </div>
+                  <div class="col-md-8">
+                      <a routerLink="view/{{m['id']}}" style="color: white; font-style: arial;"><h4>{{m['name']}} {{m['title']}}</h4></a>
+                      
+                      <h5>Overview</h5>
+                      <p style="font-size: 14px;letter-spacing:1px;">{{ m['overview'].substring(0,200) }}.</p>  
+                  </div>
+              </div>
+          </div>
+          <div class="card-footer bn" style="color: white; background: transparent;"><button  class="btn btn-sm btn-info" type="button"><a routerLink="view/{{m['id']}}" style="color: white">View More</a></button></div> 
+      </div>
   </div>
-
-
-  <div class="row kl" style="margin-top: 100px">
-    <div class="col-sm-6"  *ngFor="let m of results;let k=index">
-        <div class="card text-blank border-0 jk" [ngStyle]="{background: 'linear-gradient(-225deg, rgba(2, 1, 12, 0.85) 50%, rgba(12, 7, 1, 0.79) 80%), url(' + images[k] + ')'}">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img [src]="'http://image.tmdb.org/t/p/w185//' + m['poster_path']" alt="avatar" width="100%" height="100%">
-                    </div>
-                    <div class="col-sm-8 bn">
-                        <a routerLink="view/{{m['id']}}" style="color: white"><h4>{{m['name']}} {{m['title']}}</h4></a>
-                        
-                        <h5>Overview</h5>
-                        <p>{{ m['overview'].substring(0,200) }}...</p>  
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer bn jk" style="color: white; background: transparent;"><a routerLink="view/{{m['id']}}" style="color: white">View More..</a><span style="border: 1px solid white; border-radius: 50%;padding: 5px; float: right;box-sizing: border-box"><i class="fa fa-bookmark-o" aria-hidden="true" style="font-size: 18px; margin: 8px;"></i></span></div> 
-        </div>
-    </div>
 </div>

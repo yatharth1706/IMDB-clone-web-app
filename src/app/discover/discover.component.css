@@ -1,11 +1,5 @@
-.box{
-    margin-left: 10px;
-    display: block;
-}
-
-.search_element{
-    float: left;
-    padding-right: 50px;
+.bb{
+    margin: 0;
 }
 
 .kl{
@@ -13,49 +7,18 @@
     padding: 0;
 }
 
-label{
-    font-size: 17px;
-    display: block;
-    color: white;
-}
-.box{
-    width: 100%;
-    display: block;
-    position: absolute;
-    margin:0;
-}
-.box select {
-    
-    margin-top: 5px;
-    background-color: #15141d;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
-    /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #3e2e63;*/
-    /* -webkit-appearance: button;  */
-    background-position-x: 80px;
-} 
-
-
-.box select:hover{
-    cursor: pointer;
-}
-
-.nm input{
-    background-color: #15141d;
-    border:none;
-    margin-top: 13px;
-    width: 250px;
-    height: 44px;
-    /* box-shadow: 0 5px 25px rgba(0,0,0,.5); */
-    color: white; 
-}
-
 .jk{
-    margin-top: 10px;
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: #15141d;
 }
 
 .jk .card-body{
+    color: white!important;
+}
+
+.bb select{
+    background-color: #15141d;
     color: white!important;
 }
