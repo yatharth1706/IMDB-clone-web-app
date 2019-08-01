@@ -1,9 +1,61 @@
 .bn{
-   margin: 0 auto; 
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
-.cardstyle{
+.background-left{
+    background-color:#15141d;
+    /* background-image: url('https://raw.githubusercontent.com/samarthagarwal/Scribe/M06_L06_E01_Home_Component/src/assets/Sign-Up-BG-Image.png'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    /* background-position:left bottom; */
+}
+
+.slider-frame{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+
+.cool{
+    animation: type 2s steps(31) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    visibility: hidden;
+}
+.cool:nth-child{
+    animation-delay: 1s;
+}
+
+@keyframes type{
+    0%{
+        visibility: visible;
+        width: 0ch;
+    }
+    100%{
+        visibility: visible;
+        width: 28ch; 
+    }
+}
+.background-right{
     background-color: #15141d;
-    color: white;
 }
 
+.card{
+    background-color: transparent;
+    color: #fff; 
+}
+
+.text-muted{
+    color: #fff !important;
+}
+
+.btn[type=submit]{
+    border-radius: 50px;
+}
+
+h1{
+    color: #fff;
+}
