@@ -11,13 +11,13 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: 'login' ,component: LoginComponent},
-  {path: 'signup' , component: SignupComponent},
+  {path: 'signup' , redirectTo: ""},
   {path: 'movies', component: DisplayMoviesComponent},
   {path: 'tvshows' ,component: TvShowComponent},
   {path: 'discover', component: DiscoverComponent},
   {path: 'discover/:view/:id', component: ViewinfoComponent},
   {path: 'movies/:view/:id', component: ViewinfoComponent},
-  {path: '**', redirectTo: 'login'}
+  {path: '**', redirectTo: ""}
 ];
 
 @NgModule({
