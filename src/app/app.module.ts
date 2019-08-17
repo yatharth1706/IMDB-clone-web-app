@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// import { NgxEasypiechartModule } from 'ngx-easypiechart';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -19,6 +19,7 @@ import { ViewinfoComponent } from './viewinfo/viewinfo.component';
 import { HomeComponent } from './home/home.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 import { SafePipe } from './safe.pipe';
+import { PieTestComponent } from './pie-test/pie-test.component';
 var firebaseConfig = {
   apiKey: "AIzaSyCduDm-zjIjfs45uaHovcuAUL2AgrcNWKE",
   authDomain: "movie-a8e04.firebaseapp.com",
@@ -43,7 +44,8 @@ firebase.initializeApp(firebaseConfig);
     DiscoverComponent,
     ViewinfoComponent,
     HomeComponent,
-    SafePipe
+    SafePipe,
+    PieTestComponent
   ],
   imports: [
     BrowserModule,
