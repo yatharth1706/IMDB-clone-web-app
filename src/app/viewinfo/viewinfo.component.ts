@@ -12,6 +12,7 @@ export class ViewinfoComponent implements OnInit {
   id:string;
   results: any;
   image: string;
+  genres: any[]=[];
   constructor(private auth:AuthService,public activatedRoute: ActivatedRoute ,public sanitizer: DomSanitizer) {
     let Id=this.activatedRoute.snapshot.paramMap.get("id");
     this.id=Id;    
@@ -29,6 +30,10 @@ export class ViewinfoComponent implements OnInit {
         this.profile.push(this.cast[i]);
       }
       console.log(this.profile);
+      for(let i=0;i<this.results['genres'].length;i++){
+        this.genres.push(this.results['genres'][i]['name']);
+      }
+      console.log(this.genres);
     })
     
   }

@@ -20,9 +20,16 @@
                     </div>
                     <div class="col-sm-8">
                         <strong><h2>{{results['title']}}</h2></strong>
+                        <div class="genres" *ngFor="let p of genres">
+                            <button class="btn btn-sm btn-primary ktt">{{p}}</button>
+                        </div>
                         <p>{{results['overview']}}</p>
                         <span><h4>Released on: {{results['release_date']}}</h4></span>
-                        <button type="button" class="btn btn-primary" (click)="trailer()"><i class="fa fa-play" aria-hidden="true"></i>Play Trailer</button>
+                        <br>
+                        <button type="button" class="btn btn-primary kt" (click)="trailer()"><i class="fa fa-play" aria-hidden="true"></i> Play Trailer</button>
+                        <button type="button" class="btn btn-primary bt"><i class="fa fa-bookmark" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-primary bt"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                            <button type="button" class="btn btn-primary bt"><i class="fa fa-heart" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>

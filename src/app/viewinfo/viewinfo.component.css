@@ -34,3 +34,46 @@
 .imageContent img{
     min-height: 100px;
 }
+
+.bt{
+    margin-left: 30px;
+    border-radius: 50%;
+
+}
+
+.bt:hover{
+    background-color: black;
+    color: white;
+}
+
+.kt:hover{
+    background-color: black;
+    color: white;
+}
+
+.ktt:hover{
+    background-color: black;
+    color: white;
+}
+
+.ktt{
+    height: 20px;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.genres{
+    display: inline-block;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.genres button{
+    margin-right: 10px;
+}
+
+.btn-primary{
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: black;
+}
