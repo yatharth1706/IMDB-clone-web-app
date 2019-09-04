@@ -21,13 +21,13 @@ import {SlideshowModule} from 'ng-simple-slideshow';
 import { SafePipe } from './safe.pipe';
 import { PieTestComponent } from './pie-test/pie-test.component';
 var firebaseConfig = {
-  apiKey: "AIzaSyCduDm-zjIjfs45uaHovcuAUL2AgrcNWKE",
+  apiKey: "",
   authDomain: "movie-a8e04.firebaseapp.com",
   databaseURL: "https://movie-a8e04.firebaseio.com",
   projectId: "movie-a8e04",
   storageBucket: "",
-  messagingSenderId: "129333254476",
-  appId: "1:129333254476:web:6057e6560b1e2d12"
+  messagingSenderId: "",
+  appId: ""
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
