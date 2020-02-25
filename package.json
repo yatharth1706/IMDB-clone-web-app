@@ -31,7 +31,6 @@
     "splitting": "^1.0.6",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
-    
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.0",

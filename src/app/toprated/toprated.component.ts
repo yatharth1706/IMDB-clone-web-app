@@ -17,10 +17,9 @@ export class TopratedComponent implements OnInit {
   baseurl: string="https://api.themoviedb.org/3";
   movies
   onSearch(){
-    this.url="https://api.themoviedb.org/3/search/movie?query=spiderman&api_key=" + this.auth.apikey + "&language=en-US&external_source=imdb_id";
+    this.url="https://api.themoviedb.org/3/search/movie?query=spiderman&api_key=" + this.auth.api + "&language=en-US&external_source=imdb_id";
     this.http.get(this.url).subscribe((data)=>{
       console.log(data);
-
     })
   }
 

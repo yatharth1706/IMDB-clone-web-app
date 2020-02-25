@@ -21,7 +21,7 @@ export class DiscoverComponent implements OnInit {
     })
   }
 
-  year: number=2019;
+  year: number=2020;
   sortt: string="popularity.desc";
   genres: string="28"
   results: any[]=[];

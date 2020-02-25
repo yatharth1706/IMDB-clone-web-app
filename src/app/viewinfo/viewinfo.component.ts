@@ -41,15 +41,15 @@ export class ViewinfoComponent implements OnInit {
   key: string;
   vid:boolean=false;
   myurl:string;
-  trailer(){
-    this.auth.trailer(this.id).subscribe((data)=>{
-      console.log(data);
-      this.mov=data;
-      this.key=this.mov.results[0].key;
-      this.myurl="https://www.youtube.com/embed/" + this.key;
-    })
-    this.vid=true;
-  }
+  // trailer(){
+  //   this.auth.trailer(this.id).subscribe((data)=>{
+  //     console.log(data);
+  //     this.mov=data;
+  //     this.key=this.mov.results[0].key;
+  //     this.myurl="https://www.youtube.com/embed/" + this.key;
+  //   })
+  //   this.vid=true;
+  // }
   
   changeVid(){
     this.vid=false;
