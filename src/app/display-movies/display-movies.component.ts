@@ -7,6 +7,7 @@ import {AuthService} from '../auth.service';
   templateUrl: './display-movies.component.html',
   styleUrls: ['./display-movies.component.css']
 })
+
 export class DisplayMoviesComponent implements OnInit {
 
   constructor(private http: HttpClient,public auth: AuthService) { }
