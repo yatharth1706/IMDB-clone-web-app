@@ -1,7 +1,7 @@
 
 
 .navcolor{
-    background-color: #15141d;
+    background-color: black;
     color: white;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .dropdown-menu{
-    background-color: #15141d;
+    background-color: black;
 }
 
 .dropdown-item:hover{

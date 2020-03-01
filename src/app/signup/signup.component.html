@@ -1,69 +1,91 @@
-<div class="row background bn" style="height: 80%">
-
-        <div class="col-sm-6 background-left">
+<div class="container-fluid back-container">
+        <div class="background-left">
             <slideshow [height]="height"
-              [minHeight]="'200px'"
-              [autoPlay]="true"
-              [backgroundSize]="cover"
-              [showArrows]="true"
-              [imageUrls]="imageSources"
-              [lazyLoad]="imageSources?.length > 1"
-             [autoPlayWaitForLazyLoad]="true"
+            [minHeight]="'200px'"
+            [autoPlay]="true"
+            [backgroundSize]="cover"
+            [showArrows]="true"
+            [imageUrls]="imageSources"
+            [lazyLoad]="imageSources?.length > 1"
+           [autoPlayWaitForLazyLoad]="true"
             >
             </slideshow>
           <!-- <h1 style="margin-left: 200px;margin-top: 70px" ><p class="cool">Welcome to IMDb 2.0!</p><p class="cool">Movie DataBase</p> </h1> -->
         </div>
-       
-        <div class="col-sm-6 background-right p-5 pb-5">   
-        <div class="row">
-          <div class="offset-sm-2 col-sm-8">
-            <div class="card text-blank border-0">
-              <div class="card-body">
-                <div class="card-title text-center">
-                  <h5>Sign up Form</h5>
-                </div>
-                <div class="card-text">
-                  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
-                  <div class="form-row">
-                  <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" placeholder="First Name" [formControl]="myForm.controls['firstName']">
+
+        <div class="background-right">   
+          <div class="row">
+            <div class="offset-sm-2 col-sm-8">
+              <div class="card text-blank border-0">
+                <div class="card-body">
+                  <div class="card-title text-center">
+                    <h5>Sign up Form</h5>
                   </div>
-                  <div class="form-group col-sm-6">
-                    <input type="text" class="form-control" placeholder="Last Name" [formControl]="myForm.controls['lastName']">
+                  <div class="card-text">
+                    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+                    <div class="form-row">
+                    <div class="form-group col-sm-6">
+                      <input type="text" class="form-control" placeholder="First Name" [formControl]="myForm.controls['firstName']">
+                    </div>
+                    <div class="form-group col-sm-6">
+                      <input type="text" class="form-control" placeholder="Last Name" [formControl]="myForm.controls['lastName']">
+                    </div>
                   </div>
-                </div>
-                <div class="alert alert-danger" *ngIf="( !myForm.controls['firstName'].valid || !myForm.controls['lastName'].valid ) && (myForm.controls['firstName'].touched || myForm.controls['lastName'].touched)">
-                    First name is required!
-                  </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Enter your Email" [formControl]="myForm.controls['email']">
-                    <small class="form-text text-muted">We will never share your email with anyone</small>
-                  </div>
-                  <div class="alert alert-danger" *ngIf="(!myForm.controls['email'].valid) && myForm.controls['email'].touched">
-                      Valid email is required!
+                  <div class="alert alert-danger" *ngIf="( !myForm.controls['firstName'].valid || !myForm.controls['lastName'].valid ) && (myForm.controls['firstName'].touched || myForm.controls['lastName'].touched)">
+                      First name is required!
                     </div>
                   <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" [formControl]="myForm.controls['password']">
+                      <input type="email" class="form-control" placeholder="Enter your Email" [formControl]="myForm.controls['email']">
+                      <small class="form-text text-muted">We will never share your email with anyone</small>
                     </div>
+                    <div class="alert alert-danger" *ngIf="(!myForm.controls['email'].valid) && myForm.controls['email'].touched">
+                        Valid email is required!
+                      </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Confirm Password" [formControl]="myForm.controls['confirmPassword']">
+                        <input type="password" class="form-control" placeholder="Password" [formControl]="myForm.controls['password']">
                       </div>
-                      <div class="alert alert-danger" *ngIf="(!myForm.controls['password'].valid) && myForm.controls['password'].touched">
-                          Password should be atleast 8 characters long!
+                      <div class="form-group">
+                          <input type="password" class="form-control" placeholder="Confirm Password" [formControl]="myForm.controls['confirmPassword']">
                         </div>
-                      <div class="text-center">
-                          <button type="submit" class="btn btn-block btn-warning" [disabled]="!myForm.valid">Submit</button>
-                      </div>
-                      
-                      </form>
-                      
+                        <div class="alert alert-danger" *ngIf="(!myForm.controls['password'].valid) && myForm.controls['password'].touched">
+                            Password should be atleast 8 characters long!
+                          </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-block btn-warning" [disabled]="!myForm.valid">Submit</button>
+                        </div>
+                        
+                        </form>
+                        
+                  </div>
                 </div>
               </div>
+              
             </div>
-            
           </div>
-        </div>
-        </div>
-      
+          </div>
+</div>
+
+<div class="features">
+  <div class="subfeature">
+      <img src="https://img.icons8.com/nolan/64/worldwide-location.png" class="f-icon">
+      <div class="content">
+          <h3>Anywhere, Whereever</h3>
+          <p>Choose any movie whenever wherever</p>
       </div>
+  </div>
+  <div class="subfeature">
+      <img src="https://img.icons8.com/nolan/64/clock.png" class="f-icon">
+      <div class="content">
+          <h3>Anytime, On Demand</h3>
+          <p>Watch movie/trailer anytime. 24 hours available 7 day/week</p>
+      </div>
+  </div>
+  <div class="subfeature">
+      <img src="https://img.icons8.com/nolan/64/money.png" class="f-icon">
+      <div class="content">
+          <h3>Minimal Cost</h3>
+          <p>Watching cost is very less</p>
+      </div>
+  </div>
+</div>
       
